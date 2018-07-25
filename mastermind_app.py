@@ -4,7 +4,7 @@
 import os
 import random
 import json
-from flask import Flask, render_template, jsonify, redirect, url_for
+from flask import Flask, render_template, jsonify, redirect, url_for, make_response
 from flask_socketio import SocketIO, send, emit
 from flask_mysqldb import MySQL
 
@@ -54,24 +54,30 @@ def handleMessage(msg):
                     white+=1
 
         msg = "RESPONSE" + "," + str(black)  + "," + str(white)
-        send(msg)
-    else:
-        return redirect(url_for('game_over'))
-
-
+        if black == LENGTH and white == 0:
+            send("WIN")
+        else:
+            send(msg)
+    # else:
+    #     return redirect(url_for('game_over'))
 
 # Main route
 @app.route('/')
 def main(name=None):
+    return redirect(url_for('start'))
+
+@app.route('/start')
+def start(name=None):
     return render_template("start_game.html", name=name)
 
 @app.route('/play')
 def play(name=None):
     return render_template("play_game.html", name=name)
 
-@app.route('/game_over')
-def game_over(name=None):
-    return render_template("game_over.html", name=name)
+# @app.route('/game_over')
+# def game_over(name=None):
+#     print "inside"
+#     return render_template("game_over.html", name=name)
 
 if __name__ == '__main__':
     socketio.run(app)

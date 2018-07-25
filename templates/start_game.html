@@ -5,15 +5,22 @@
 		<title>Mastermind</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 	</head>
 <body>
 
-<h1>Start playing!</h1>
-
-<ul>
-	<li><a href="{{ url_for('play') }}"> Start </a></li>
-</ul>
-
-
+<div id="header">
+	<h2 id="mastermind">Mastermind</h2>
+</div>
+<br>
+<br>
+<section id="wrapper">
+	<header>
+		<div>
+			<h1>Start a new game</h1>
+			<a href="{{ url_for('play') }}">START</a>
+		</div>
+	</header>
+</section>
 </body>
 </html>
