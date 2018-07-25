@@ -12,7 +12,8 @@ pattern = [random.choice(options) for _ in range(lenght)]
 
 # FUNCTION DECLARATION
 def main():
-	# main(): It recieves an input, compares it to the pattern to guess and responds with a conclusion.
+	""" It recieves an input, compares it to the pattern to guess and responds with a conclusion. """
+	
 	guess_1 = raw_input('First guess: ')
 	guess_2 = raw_input('Second guess: ')
 	guess_3 = raw_input('Third guess: ')
@@ -35,7 +36,8 @@ def main():
 
 # MAIN LOOP
 for each in range(attempts):
-	# For Loop: Runs until the user runs out of attempts or the function returns a True value meaning the user won the game.
+	""" Runs until the user runs out of attempts or the function returns a True value meaning the user won the game."""
+	
 	if main():
 		print "You guessed it right! You're such a code breaker!"
 		break
