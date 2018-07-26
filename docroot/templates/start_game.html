@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="icon" href="{{ url_for('static', filename='images/ico.png') }}">
+		<title>Mastermind</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	</head>
+<body>
+
+<div id="header">
+	<h2 id="mastermind">Mastermind</h2>
+</div>
+<br>
+<br>
+<section class="NewGame">
+	<h1>START A NEW GAME</h1>
+	<div class="start">
+		<a href="{{ url_for('play') }}"class="btn btn-blue">START</a>
+	</div>
+</section>
+
+<img id="start-image" src="../static/images/start-icon.png">
+
+<div id="footer">
+	<!--<h3>APC - 21b</h3>-->
+</div>
+</body>
+</html>

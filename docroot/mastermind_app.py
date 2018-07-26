@@ -4,13 +4,11 @@
 import os
 import random
 import json
-import redis
 from flask import Flask, render_template, jsonify, redirect, url_for, make_response
 from flask_socketio import SocketIO, send, emit
 from flask_mysqldb import MySQL
 
 app = Flask(__name__)
-cache = redis.Redis(host='redis', port=6379)
 # app.config['MySQL_HOST'] = os.environ["DB_HOST"]
 # app.config['MySQL_USER'] = os.environ["DB_USER"]
 # app.config['MySQL_PASSWORD'] = os.environ["DB_PSWD"]
@@ -60,6 +58,8 @@ def handleMessage(msg):
             send("WIN")
         else:
             send(msg)
+    # else:
+    #     return redirect(url_for('game_over'))
 
 # Main route
 @app.route('/')
@@ -74,6 +74,10 @@ def start(name=None):
 def play(name=None):
     return render_template("play_game.html", name=name)
 
+# @app.route('/game_over')
+# def game_over(name=None):
+#     print "inside"
+#     return render_template("game_over.html", name=name)
 
 if __name__ == '__main__':
     socketio.run(app)

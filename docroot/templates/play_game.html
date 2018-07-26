@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<link rel="icon" href="{{ url_for('static', filename='images/ico.png') }}">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename = 'js/game.js') }}"></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+		<title>Mastermind</title>
+	</head>
+	<body>
+
+	<div id="div-tittle" class="start">
+		<h1 id="txt-play">Time to guess</h1>
+	</div>
+	<div id="div-selections" class="start" >
+		<div class="selections">
+			<select id = "Color-1">
+				<option value="RED">RED</option>
+				<option value="BLUE">BLUE</option>
+				<option value="YELLOW">YELLOW</option>
+				<option value="GREEN">GREEN</option>
+				<option value="PURPLE">PURPLE</option>
+			</select>
+
+			<select id = "Color-2">
+				<option value="RED">RED</option>
+				<option value="BLUE">BLUE</option>
+				<option value="YELLOW">YELLOW</option>
+				<option value="GREEN">GREEN</option>
+				<option value="PURPLE">PURPLE</option>
+			</select>
+
+			<select id = "Color-3">
+				<option value="RED">RED</option>
+				<option value="BLUE">BLUE</option>
+				<option value="YELLOW">YELLOW</option>
+				<option value="GREEN">GREEN</option>
+				<option value="PURPLE">PURPLE</option>
+			</select>
+
+			<select id = "Color-4">
+				<option value="RED">RED</option>
+				<option value="BLUE">BLUE</option>
+				<option value="YELLOW">YELLOW</option>
+				<option value="GREEN">GREEN</option>
+				<option value="PURPLE">PURPLE</option>
+			</select>
+		</div>
+	</div>
+
+	<div id="div-send" class="start">
+		<br>
+		<a class="btn btn-blue" id="sendbutton">Guess</a>
+	</div>	
+	<br>
+	<div id="div-response" class="start">
+		<p id="messages"></p>
+	</div>
+	<div id="div-attempts" class="start">
+		<p id="attempts"></p>
+	</div>
+	<div id="div-loss" class="start">
+		<h5 id="txtGameOver">Game Over</h5>
+		<a class="btn btn-red" id="buttonGameOver" href="{{ url_for('start') }}">Try again</a>
+	</div>
+	<div id="div-win" class="start">
+		<h4 id="txtWin">You won</h4>
+		<a class="btn btn-green" id="buttonWin" href="{{ url_for('start') }}">Play again</a>
+	</div>
+
+	<div id="div-historic" class="historic">
+	</div>
+	</body>
+</html>

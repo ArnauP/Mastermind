@@ -1,0 +1,192 @@
+body {
+	background-color: #2e3141;
+	background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../images/bg.jpg");
+	background-size: auto, cover;
+	background-attachment: fixed, fixed;
+	background-position: center, center;
+	color: #ffffff;
+	/*font-family: "Source Sans Pro", Helvetica, sans-serif;*/
+	font: 600 1.5em/1 'Raleway', sans-serif;
+	font-size: 16.5pt;
+	font-weight: 300;
+	line-height: 1.65;
+}
+
+h1, h2, h3, h4, h5 {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 0;
+}
+
+h1 {
+	text-align: center;
+	font-size: 70px;
+    z-index: 100;
+    text-shadow: .04em .04em 0 #9cb8b3;
+}
+
+h2{
+	font-size: 16pt;
+	margin:0;
+}
+
+h3{
+	font-size: 10pt;
+	margin:0;
+}
+
+h4 {
+	text-align: center;
+	font-size: 70px;
+    z-index: 100;
+    text-shadow: .04em .04em 0 #24d830;
+}
+
+h5 {
+	text-align: center;
+	font-size: 70px;
+    z-index: 100;
+    text-shadow: .04em .04em 0 #d82323;
+}
+
+
+a.btn {
+	display: inline-block;
+	color: #666;
+	background-color: #eee;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+	padding: 10px 30px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-bottom-width: 3px;
+}
+
+	a.btn:hover {
+		background-color: #e3e3e3;
+		border-color: rgba(0,0,0,0.5);
+	}
+	
+	a.btn:active {
+		background-color: #CCC;
+		border-color: rgba(0,0,0,0.9);
+	}
+
+/* blue button */
+
+a.btn.btn-blue {
+	background-color: #699DB6;
+	border-color: rgba(0,0,0,0.3);
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	color: #FFF;
+}
+
+	a.btn.btn-blue:hover {
+		background-color: #4F87A2;
+		border-color: rgba(0,0,0,0.5);
+	}
+	
+	a.btn.btn-blue:active {
+		background-color: #3C677B;
+		border-color: rgba(0,0,0,0.9);
+	}
+
+a.btn.btn-red {
+	background-color: #af1616;
+	border-color: #c61717;
+	text-shadow: 0 1px 0 #840b0b;
+	color: #FFF;
+}
+
+	a.btn.btn-red:hover {
+		background-color: #e23434;
+		border-color: rgba(0,0,0,0.5);
+	}
+	
+	a.btn.btn-red:active {
+		background-color: #e23434;
+		border-color: rgba(0,0,0,0.9);
+	}
+
+a.btn.btn-green {
+	background-color: #2da347;
+	border-color: #0f6322;
+	text-shadow: 0 1px 0 #15752a;
+	color: #FFF;
+}
+
+	a.btn.btn-green:hover {
+		background-color: #0ed63c;
+		border-color: rgba(0,0,0,0.5);
+	}
+	
+	a.btn.btn-green:active {
+		background-color: #0ed63c;
+		border-color: rgba(0,0,0,0.9);
+	}
+
+.NewGame {
+	background: white;
+  /*background: url("../images/brain-1.png") -80px -80px;*/
+  color: red;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: bold;
+  font-size: 35px;
+  font-family: arial, helvetica;
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#header {
+	background-color: rgba(53, 56, 73, 0.95);
+	height: 3.5em;
+	left: 0;
+	line-height: 3.5em;
+	padding: 0 1.25em;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10000;
+	text-align: left;
+}
+
+#footer {
+	background-color: rgba(53, 56, 73, 0.95);
+	height: 3.5em;
+	left: 0;
+	line-height: 3.5em;
+	padding: 0 1.25em;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 10000;
+	text-align: left;
+}
+
+.start {
+	text-align: center;
+}
+
+.selections {
+	margin-top: 50px;
+}
+
+.center-on-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#start-image {
+	height: 10%;
+    width: 10%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
