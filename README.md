@@ -1,7 +1,5 @@
 # Mastermind
 
-## API Description
-
 ## Execution instructions
 To deploy the API you must first execute the following command:
 * `docker-compose up --build`

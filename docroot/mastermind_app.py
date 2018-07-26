@@ -27,12 +27,18 @@ def handleMessage(msg):
 
         black=0
         white=0
+        w_guess = []
+        w_pattern = []
         for n in range(LENGTH):
             if guess[n] == pattern[n]:
                 black+=1
             else:
-                if guess[n] in pattern:
-                    white+=1
+                w_guess += [guess[n]]
+                w_pattern += [pattern[n]]
+
+        for n in range(0, len(w_pattern)):
+            if w_guess[n] in w_pattern:
+                white+=1
 
         msg = "RESPONSE" + "," + str(black)  + "," + str(white)
         if black == LENGTH and white == 0:

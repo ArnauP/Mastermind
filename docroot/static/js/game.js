@@ -35,7 +35,7 @@ $(document).ready(function() {
         var s_msg = msg.split(",");
         if (s_msg[0] == "PATTERN") {
             pattern = s_msg;
-            // console.log("pattern")
+            console.log(pattern)
         } else if (s_msg[0] == "WIN") {
           document.getElementById("id-tittle").style.display = "none";
           document.getElementById("id-guess").style.display = "none";
