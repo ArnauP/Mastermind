@@ -190,3 +190,30 @@ a.btn.btn-green {
     margin-left: auto;
     margin-right: auto;
 }
+
+.div-tittle { grid-area: tittle; }
+.div-historic { grid-area: historic; }
+.div-guess { grid-area: guess; }
+.div-all-response { grid-area: response; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  	'tittle tittle tittle'
+    'historic guess response';
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.div-historic {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+}
+
+.tittle-play {
+	text-align: center;
+	width: 100%;
+	margin-left: 100px; 
+	margin-right: 100px;
+}
